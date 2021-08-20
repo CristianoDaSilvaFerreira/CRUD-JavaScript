@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" href="css/modal.css">
+
+    <title>CRUD</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">Registrar o Cliente</h1>
+    </header>
+    <main>
+        <button type="button" class="button blue mobile" id="createCustomer">Registrar o Cliente</button>
+        <table id="tableCustomer" class="records">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Acão</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Cliente</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="name" data-index="new" class="modal-field" placeholder="Nome cliente" required>
+                    <input type="email" id="email" class="modal-field" placeholder="E-mail cliente" required>
+                </form>
+                <footer class="modal-footer">
+                    <button id="save" class="button blue">Salva</button>
+                    <button id="cancel" class="button red">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <i id="logout" onclick="userLogout()" class="fas fa-sign-out-alt"></i>
+    <footer>
+    </footer>
+    <script src="js/middleware/notAuth.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>
