@@ -61,7 +61,7 @@ loginUser = () => {
 
         localStorage.getItem('myToken');
 
-        location = "home.html"
+        location = "index.html"
     } else {
         alert('Usuário não encontrado!')
     }
